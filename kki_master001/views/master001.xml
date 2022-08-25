@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="kki_master001.list">
+            <field name="name">kki_master001 list</field>
+            <field name="model">kki_master001.master</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="code2"/>
+                    <field name="hinmei"/>
+                    <field name="classification"/>
+                    <field name="classification2"/>
+                    <field name="image"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="kki_master001.form">
+            <field name="name">kki_master001 form</field>
+            <field name="model">kki_master001.master</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="code2"/>
+                                <field name="hinmei"/>
+                                <field name="classification"/>
+                                <field name="classification2"/>
+                                <field name="description"/>
+                                <field name="thickness"/>
+                                <field name="range"/>
+                                <field name="range2"/>
+                                <field name="url"/>
+                            </group>
+                            <group>
+                                <field name="image" widget="image"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="kki_master001.action_window">
+            <field name="name">kki_master001 window</field>
+            <field name="res_model">kki_master001.master</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="kki_master001" id="kki_master001.menu_root"
+                  web_icon="kki_master001,static/description/f_f_business_63_s512_f_business_63_0bg.png"/>
+
+        <menuitem name="master" id="kki_master001.master" parent="kki_master001.menu_root"/>
+        <!--
+            <menuitem name="Menu 2" id="kki_forklift.menu_2" parent="kki_forklift.menu_root"/>
+        -->
+        <!-- actions -->
+
+        <menuitem name="master" id="kki_master001.master_list" parent="kki_master001.master"
+                  action="kki_master001.action_window"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="code2_action_window">
+            <field name="name">kki_master001_code2 window</field>
+            <field name="res_model">kki_master001.code2</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="code2" id="kki_master001.code2_list" parent="kki_master001.master"
+                  action="ode2_action_window"/>
+    </data>
+</odoo>
