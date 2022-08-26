@@ -7,6 +7,7 @@ class kki_product(models.Model):
     _inherit = "product.template"
 
     name2 = fields.Char()
+    unified_id = fields.Char("unified_id")
     marge_name = fields.Char(compute="_get_marge_name", store=True)
 
     @api.depends('name', 'name2')
