@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="category_action_window">
+            <field name="name">kki_product_category window</field>
+            <field name="res_model">kki_product.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="category" id="kki_product.category_list" parent="kki_product.category"
+                  action="category_action_window"/>
+
+
+    </data>
+</odoo>
